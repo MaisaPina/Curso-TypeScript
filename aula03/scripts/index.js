@@ -2,19 +2,19 @@ import Controller from "./controller.js";
 import Model from "./model.js";
 import View from "./view.js";
 //criar instancia
-var ViewInstance = new View();
-var ModelInstance = new Model();
-var ControllerInstance = new Controller(ViewInstance, ModelInstance);
-var cadastrar = document.getElementById('cadastrar');
-var createProduct = document.getElementById('product-list');
-var nameProduct = document.getElementById('name');
-var brandProduct = document.getElementById('brand');
-var priceProduct = document.getElementById('price');
-var categoryProduct = document.getElementById('category');
-var activeProduct = document.getElementById('active');
-var quantifyProduct = document.getElementById('quantify');
-//for�ando dados pra testar localstorage
-var product = {
+const ModelInstance = new Model();
+const ControllerInstance = new Controller(ModelInstance);
+const ViewInstance = new View(ControllerInstance);
+const cadastrar = document.getElementById('cadastrar');
+const createProduct = document.getElementById('product-list');
+const nameProduct = document.getElementById('name');
+const brandProduct = document.getElementById('brand');
+const priceProduct = document.getElementById('price');
+const categoryProduct = document.getElementById('category');
+const activeProduct = document.getElementById('active');
+const quantifyProduct = document.getElementById('quantify');
+//forçando dados pra testar localstorage
+const product = {
     id: 1,
     name: 'feijao',
     brand: 'Tio Joao',
@@ -28,7 +28,8 @@ cadastrar === null || cadastrar === void 0 ? void 0 : cadastrar.addEventListener
     cadastrarClick;
 });
 function cadastrarClick() {
-    createProduct === null || createProduct === void 0 ? void 0 : createProduct.addEventListener("submit", ViewInstance.ListenClickButton);
+    var _a;
+    (_a = createProduct) === null || _a === void 0 ? void 0 : _a.addEventListener("submit", ViewInstance.ListenClickButton);
     ModelInstance.saveProductToLocalStorage(product);
 }
 //funcao do click

@@ -24,5 +24,5 @@ export default class Model {
 
 localStorage:
 -> salvar item: let myItem = localStorage.getItem(key);
--> atualizar item: localStorage.removeItem(key);;
+-> atualizar item: localStorage.setItem(key);;
 -> excluir item: localStorage.removeItem(key);*/

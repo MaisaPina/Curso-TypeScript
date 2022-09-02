@@ -3,9 +3,9 @@ import Model from "./model.js";
 import View from "./view.js";
 
 //criar instancia
-const ViewInstance = new View();
 const ModelInstance = new Model();
-const ControllerInstance = new Controller(ViewInstance, ModelInstance);
+const ControllerInstance = new Controller(ModelInstance);
+const ViewInstance = new View(ControllerInstance);
 
 const cadastrar = document.getElementById('cadastrar'); 
 const createProduct:HTMLElement | null= document.getElementById('product-list');
@@ -17,7 +17,7 @@ const categoryProduct:HTMLElement | null= document.getElementById('category');
 const activeProduct:HTMLElement | null= document.getElementById('active');
 const quantifyProduct:HTMLElement | null= document.getElementById('quantify');
 
-//forçando dados pra testar localstorage
+//forÃ§ando dados pra testar localstorage
 const product = {
   id: 1,
   name: 'feijao',

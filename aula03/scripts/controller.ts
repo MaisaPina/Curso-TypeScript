@@ -3,10 +3,8 @@ import  Model from "./model.js";
 import  View from "./view.js";
 
 export default class Controller {
-  View: any;
   Model: any;
-  constructor(View: View, Model: Model) {
-    this.View = View;
+  constructor(Model: Model) {
     this.Model = Model;
   };
 
