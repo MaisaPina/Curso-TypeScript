@@ -18,7 +18,7 @@ function App() {
   // },[contador]);
 
   return (
-    <div>
+    <div className='div-calculadora'>
       {/* <p>{contador}</p> */}
       <Numero>{num1}</Numero>
       <div>
