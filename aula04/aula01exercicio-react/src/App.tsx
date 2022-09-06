@@ -21,25 +21,25 @@ function App() {
     <div className='div-calculadora'>
       {/* <p>{contador}</p> */}
       <Numero>{num1}</Numero>
-      <div>
+      <div className='botao'>
       <Botao onClick={calcular} texto="7"></Botao>
       <Botao onClick={calcular} texto="8"></Botao>
       <Botao onClick={calcular} texto="9"></Botao>
       <Botao onClick={calcular} texto="\"></Botao>
       </div>
-      <div>
+      <div className='botao'>
       <Botao onClick={calcular} texto="4"></Botao>
       <Botao onClick={calcular} texto="5"></Botao>
       <Botao onClick={calcular} texto="6"></Botao>
       <Botao onClick={calcular} texto="x"></Botao>
       </div>
-      <div>
+      <div className='botao'>
       <Botao onClick={calcular} texto="1"></Botao>
       <Botao onClick={calcular} texto="2"></Botao>
       <Botao onClick={calcular} texto="3"></Botao>
       <Botao onClick={calcular} texto="+"></Botao>
       </div>
-      <div>
+      <div className='botao'>
       <Botao onClick={calcular} texto="0"></Botao>
       <Botao onClick={calcular} texto="."></Botao>
       <Botao onClick={calcular} texto="="></Botao>

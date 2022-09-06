@@ -14,7 +14,13 @@ code {
 
 .div-calculadora {
   text-align: center;
-  background: pink;
-  width: 150px;
-  height: 150px;
+  background: lightcoral;
+  width: 230px;
+  height: 230px;
+  border-radius: 15px 50%; /*formato*/
+  border: 2px solid pink;
+}
+
+.botao{
+  height: 40px;
 }
