@@ -16,8 +16,8 @@ code {
   text-align: center;
   background: lightcoral;
   width: 230px;
-  height: 230px;
-  border-radius: 15px 50%; /*formato*/
+  height: 250px;
+  /*border-radius: 15px 50%; formato*/
   border: 2px solid pink;
 }
 

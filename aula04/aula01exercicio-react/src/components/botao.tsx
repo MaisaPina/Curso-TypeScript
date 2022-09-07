@@ -8,5 +8,5 @@ type BotaoProps = {
 
 /*componetizando o botão, posso usar na aplicação todo, esse botão*/
 export default function Botao(props: BotaoProps){
-  return(<button onClick={props.onClick(props.texto)}>{props.texto}</button>)
+  return(<button onClick={()=>props.onClick(props.texto)}>{props.texto}</button>)
 }
