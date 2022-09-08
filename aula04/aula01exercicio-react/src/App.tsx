@@ -7,28 +7,38 @@ function App() {
   /*estado e não uma variável, usado para renderizar*/
   //criando estados para salvar os digitos do usuário
   const [num1, setNum1] = useState("0");
-  const [num2, setNum2] = useState("0");
+  const [num2, setNum2] = useState("");
+  const [operador, setOperador] = useState("");
   const [resultado, setResultado] = useState("0");
 
   /*função*/
   function addvalor(valor: string){
     //salvar o numero nos estados
     //salvando no primeiro estado 'num1'
+    if(operador == ""){
       setNum1(num1 + valor);
+    }else{
+      setNum2(num2 + valor);
+    }
   }
 
-  function calcular(valor: string){
+  function calcular(){
     //no botão do igual vai colocar o eval do js
-    
+    // setResultado("num1" + "num2");
+    // eval(resultado);
+    // console.log(num1);
+    // setResultado( parseInt(num1) + parseInt(num2));
   }
 
   function operacao(valor: string){
     setNum1(num1 + valor);
+    setOperador(operador + valor);
   }
 
-  function apagar(valor: string){
+  function apagar(){
     setNum1("0");
     setNum2("");
+    setOperador("");
   }
 
   // useEffect(()=>{
@@ -38,7 +48,8 @@ function App() {
   return (
     <div className='div-calculadora'>
       {/* <p>{contador}</p> */}
-      <Numero>{num1}</Numero>
+      <Numero>{num1}{num2}</Numero>
+      {/* <Numero>{num2}</Numero> */}
       <div className='botao'>
       <Botao onClick={addvalor} texto="7"></Botao>
       <Botao onClick={addvalor} texto="8"></Botao>
